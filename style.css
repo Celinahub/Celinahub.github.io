@@ -362,7 +362,7 @@ a.btn.btn-outline-primary:focus:active {
 
 
  /* Ajoutez ce CSS pour maintenir les images carrées */
- .portfolio-image {
+.portfolio-image {
    padding: 10px;
    text-align: center;
 }
@@ -375,7 +375,73 @@ a.btn.btn-outline-primary:focus:active {
    margin-bottom: 20px;
 }
 
+.portfolio-image {
+   padding: 10px;
+   text-align: center;
+}
+
+
+.uni-frame {
+   background-color: #444243;
+   width: 100%;
+   position: relative;
+   text-align: center;
+   color: #F9F4F0;
+   font-family: 'VotrePolice', sans-serif;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   aspect-ratio: 1 / 1;
+   overflow: hidden;
+}
+
+ 
+.uni-text {
+   margin-top: 10px;
+   margin-left: 2vw; /* Utilisation de vw pour une marge relative à la largeur de la vue */
+   margin-right: 2vw;
+   white-space: normal;
+   font-size: 1vw; /* Utilisation de vw pour la taille de la police relative à la largeur de la vue */
+   min-width: 140px; /* Taille minimale pour le texte en pixels */
+}
+ 
+.texte-proportionnel {
+   margin-top: 10px;
+   margin-left: 2vw; /* Utilisation de vw pour une marge relative à la largeur de la vue */
+   margin-right: 2vw;
+   white-space: normal;
+   font-size: 1.2vw; /* Utilisation de vw pour la taille de la police relative à la largeur de la vue */
+   min-width: 160px; /* Taille minimale pour le texte en pixels */
+}
+
+@media screen and (max-width: 768px) {
+   .uni-text {
+      font-size: 15px; /* Taille spécifique pour les écrans plus petits */
+   }
+
+   .texte-proportionnel {
+      font-size: 18px; /* Taille spécifique pour les écrans plus petits */
+   }
+}
+
+
+
+
+
+
+
+ 
+
+
 /* Nouvelle classe pour les images animées avec une taille fixe */
+.fixed-size {
+   max-width: 100%;
+   height: auto;
+   width: 100%; /* Ajustez la largeur selon vos besoins */
+   height: auto; /* Ajustez la hauteur selon vos besoins */
+}
 
 /* CSS pour ajuster la mise en page sur les écrans plus petits */
 @media (max-width: 767px) {
@@ -383,6 +449,7 @@ a.btn.btn-outline-primary:focus:active {
         text-align: center;
     }
 }
+
 
 .hidden {
     display: none;
@@ -445,7 +512,7 @@ a.btn.btn-outline-primary:focus:active {
    cursor: pointer;
    display: flex;
    align-items: center;
-   margin-bottom: -26px; /* Réduisez la marge en bas pour rapprocher le bouton de l'image */
+   margin-bottom: -8px; /* Réduisez la marge en bas pour rapprocher le bouton de l'image */
 
 }
 
@@ -459,8 +526,9 @@ a.btn.btn-outline-primary:focus:active {
  
  /* Ajoutez cette règle pour ajuster la position verticale du texte */
  .next-button-4 span {
-    margin-top: -24px; /* Ajustez cette valeur pour déplacer le texte vers le haut */
+    margin-top: -5px; /* Ajustez cette valeur pour déplacer le texte vers le haut */
  }
+ 
  
  /* CSS */
  .timeline {
@@ -642,9 +710,6 @@ a.btn.btn-outline-primary:focus:active {
     }
  }
 
-   /* Ajoutez une marge intérieure à la section du portfolio */
- 
-
    
 
    #contact {
@@ -653,6 +718,10 @@ a.btn.btn-outline-primary:focus:active {
       padding: 20px;
   }
   
+  .contact-content {
+   margin: 0 20px; /* Ajoutez une marge horizontale de 20px à gauche et à droite */
+}
+
   #contact-info,
   #liens-sociaux {
       display: flex;
@@ -722,6 +791,8 @@ a.btn.btn-outline-primary:focus:active {
       width: 100%;
   }
   
+
+
   @media screen and (max-width: 768px) {
       #contact-info,
       #liens-sociaux,
@@ -736,9 +807,58 @@ a.btn.btn-outline-primary:focus:active {
    padding: 20px; /* Ajoutez du rembourrage si nécessaire */
 }
 
- 
+.btn-custom {
+   background-color: #444243;
+   border-color: #444243;
+   color: white; /* Couleur du texte en état normal */
+}
+
+.btn-custom:hover {
+   background-color: #C26C6B;
+   border-color: #C26C6B;
+   color: white; /* Couleur du texte au survol */
+}
+
+.btn-custom:focus {
+   outline: none; /* Supprime la bordure par défaut au focus */
+}
+/* ... autres styles de boutons ... */
    
+ /* Icônes de marqueurs */
+        
+        /* Icônes de marqueurs en noir et blanc */
  
+ /* Désaturation de la carte en noir et blanc */
+ #map {
+   filter: grayscale(100%);
+}
+
+/* Ajustement du formulaire pour qu'il ne dépasse pas de la carte */
+@media (min-width: 992px) {
+   .contact-form {
+       max-height: 500px; /* Ajustez la hauteur maximale selon vos besoins */
+   }
+}
+
+/* Ajoutez de l'espace entre la carte et le formulaire sur les écrans plus petits */
+@media (max-width: 768px) {
+   .col-md-6 {
+       margin-bottom: 20px; /* Ajoute de la marge en bas de la colonne du formulaire */
+   }
+
+   .col-md-6 {
+       margin-bottom: 20px; /* Ajoute de la marge en bas de la colonne de la carte */
+   }
+}
+
+/* Ajustez la largeur du formulaire uniquement pour la section de contact */
+@media (min-width: 768px) {
+   .custom-contact-section .col-md-6,
+   .custom-contact-section .col-md-6 {
+       width: 50%; /* Ajustez la largeur selon vos besoins */
+   }
+}
+
      
  
       
