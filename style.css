@@ -409,23 +409,24 @@ a.btn.btn-outline-primary:focus:active {
  
 .texte-proportionnel {
    margin-top: 10px;
-   margin-left: 2vw; /* Utilisation de vw pour une marge relative à la largeur de la vue */
+   margin-left: 2vw;
    margin-right: 2vw;
    white-space: normal;
-   font-size: 1.2vw; /* Utilisation de vw pour la taille de la police relative à la largeur de la vue */
-   min-width: 160px; /* Taille minimale pour le texte en pixels */
+   font-size: 1.2vw;
+   min-width: 160px;
+   letter-spacing: 8px; /* Ajustez cette valeur selon vos préférences */
 }
 
 @media screen and (max-width: 768px) {
    .uni-text {
-      font-size: 10px; /* Taille spécifique pour les écrans plus petits */
+      font-size: 10px;
    }
 
    .texte-proportionnel {
-      font-size: 16px; /* Taille spécifique pour les écrans plus petits */
+      font-size: 15px;
+      letter-spacing: 4px; /* Ajustez cette valeur selon vos préférences */
    }
 }
-
 
 
 
