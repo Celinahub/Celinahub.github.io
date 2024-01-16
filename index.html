@@ -54,49 +54,49 @@
                 <!-- Ajoutez le style directement dans vos balises <a> pour chaque élément de menu -->
 <li class="nav-item">
     <a class="nav-link d-flex align-items-center" href="#presentation" style="height: 100%;">
-        <i class="fas fa-star nav-link-icon" style="margin-right: 15px;"></i>
+        <i class="fas fa-star nav-link-icon" style="margin-right: 0.25em;"></i>
         <span class="nav-link-text">Présentation</span>
     </a>
 </li>
    
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#competences" style="height: 100%;">
-                        <i class="fas fa-cogs nav-link-icon" style="margin-right: 12px;"></i>
+                        <i class="fas fa-cogs nav-link-icon" style="margin-right: 0.1em;"></i>
                         <span class="nav-link-text">Compétences</span>
                     </a>
                 </li>
                      
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#diplomes" style="height: 100%;">
-                        <i class="fas fa-graduation-cap nav-link-icon" style="margin-right: 12px;"></i>
+                        <i class="fas fa-graduation-cap nav-link-icon" style="margin-right: 0.1em;"></i>
                         <span class="nav-link-text">Diplômes</span>
                     </a>
                 </li>
                    
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#portfolio" style="height: 100%;">
-                        <i class="fas fa-briefcase nav-link-icon" style="margin-right: 15px;"></i>
+                        <i class="fas fa-briefcase nav-link-icon" style="margin-right: 0.3em;"></i>
                         <span class="nav-link-text">Portfolio</span>
                     </a>
                 </li>
                    
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#experiences" style="height: 100%;">
-                        <i class="fas fa-business-time nav-link-icon" style="margin-right: 12px;"></i>
+                        <i class="fas fa-business-time nav-link-icon" style="margin-right: 0.1em;"></i>
                         <span class="nav-link-text">Expériences</span>
                     </a>
                 </li>
                    
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#loisirs" style="height: 100%;">
-                        <i class="fas fa-suitcase nav-link-icon" style="margin-right: 15px;"></i>
+                        <i class="fas fa-suitcase nav-link-icon" style="margin-right: 0.3em;"></i>
                         <span class="nav-link-text">Loisirs</span>
                     </a>
                 </li>
                   
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center" href="#contact" style="height: 100%;">
-                        <i class="fas fa-envelope nav-link-icon" style="margin-right: 15px;"></i>
+                        <i class="fas fa-envelope nav-link-icon" style="margin-right: 0.3em;"></i>
                         <span class="nav-link-text">Contact</span>
                     </a>
                 </li>
@@ -664,7 +664,7 @@ Il sait organiser son poste de travail et appliquer des consignes de sécurité.
                 <img id="image-to-replace3" src="images/portfolio/dossier-technique/descriptif.jpg" alt="Dossier technique pantalon denim" width="100%" height="auto">
                 <button class="btn next-button next-button-3" id="next-button3">
                     <i class="fas fa-cogs"></i>
-                    <span style="color: #C26C6B; font-size: 14px; font-weight: bold;">Dossier technique</span>
+                    <span style="color: #C26C6B; font-size: 14px; font-weight: bold;">Technique</span>
                 </button>
             </div>
         </div>
@@ -924,11 +924,9 @@ Il sait organiser son poste de travail et appliquer des consignes de sécurité.
     <div class="contact-content" style="margin: 0 20px;">
         <div class="profile-text">
             <h1 class="h2" style="color: #444243; font-weight: bold; margin-bottom: 50px; font-size: 30px;"><i class="fas fa-envelope"></i> Contact</h1>
-
             <div class="row">
-                <!-- Colonne de gauche -->
+                <!-- Colonne du bloc Email -->
                 <div class="col-md-6">
-                    <!-- Bloc Email -->
                     <div id="contact-info" style="margin-bottom: 20px; font-weight: bold;">
                         <div class="d-flex align-items-center">
                             <div class="email-icon">
@@ -939,13 +937,15 @@ Il sait organiser son poste de travail et appliquer des consignes de sécurité.
                                 var a = "chubert.contactpro";
                                 var b = "yahoo.com";
                                 var c = a + "@" + b;
-                                document.write('<a href="mailto:' + c + '" style="color: #444243; text-decoration: none; margin-left: 10px; font-size: 2vw;">' + c + '</a>');
+                                document.write('<a href="mailto:' + c + '" style="color: #444243; text-decoration: none; margin-left: 10px;"><span class="email-text">' + c + '</span></a>');
                                 //]]>
-                                </script>
+                            </script>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Bloc Liens sociaux -->
+                <!-- Colonne du bloc Liens sociaux -->
+                <div class="col-md-6">
                     <div id="liens-sociaux" style="margin-bottom: 20px; font-weight: bold;">
                         <p style="color: #444243; margin-top: 20px; font-weight: bold; font-size: 2vw;">
                             <a href="https://github.com/Celinahub" target="_blank" style="text-decoration: none; margin-right: 10px; color: #444243;">
@@ -954,48 +954,22 @@ Il sait organiser son poste de travail et appliquer des consignes de sécurité.
                             <a href="https://www.linkedin.com/in/c%C3%A9line-hubert/?originalSubdomain=fr" target="_blank" style="text-decoration: none; margin-right: 10px; color: #444243;">
                                 <i class="fab fa-linkedin-in linkedin-icon"></i>
                             </a>
-                            <span style="color: #444243;">SUIVEZ-MOI !</span>
+                            <span class="follow-text" style="color: #444243;">SUIVEZ-MOI !</span>
                         </p>
                     </div>
+                </div>
 
-                    <!-- Bloc Formulaire -->
-                    <div class="contact-form section-wrapper" style="background-color: #FFF; padding: 20px; border-radius: 5px;">
-                        <form>
-                            <div class="mb-3">
-                                <label for="nom" class="form-label" style="color: #444243;">Nom</label>
-                                <input type="text" class="form-control" id="prenom" name="prenom" required>
-                            </div>
-                                                <div class="mb-3">
-                                                    <label for="prenom" class="form-label" style="color: #444243;">Prénom</label>
-                                                    <input type="text" class="form-control" id="prenom" name="prenom" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="email" class="form-label" style="color: #444243;">Email</label>
-                                                    <input type="email" class="form-control" id="email" name="email" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="message" class="form-label" style="color: #444243;">Message</label>
-                                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                                                </div>
-                                                <button type="submit" class="btn btn-custom">Envoyer</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                    
-                                    <!-- Colonne de droite -->
-                                    <div class="col-md-6">
-                                        <!-- Carte -->
-                                        <div id="map" style="height: 840px; border: 5px solid #fff; border-radius: 5px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-
-
-
+                <!-- Colonne de la carte -->
+                <div id="contact-map" class="col-md-12">
+                    <!-- Integrate your map here -->
+                    <!-- Colonne de la carte (12 colonnes sur les grands écrans) -->
+                    <div id="map" style="height: 500px; border: 5px solid #fff; border-radius: 5px;"></div>
+                    <!-- You can use Google Maps or any other mapping service -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -1016,11 +990,6 @@ Il sait organiser son poste de travail et appliquer des consignes de sécurité.
 <!-- Ajoutez la nouvelle inclusion de Bootstrap 5 avec l'attribut defer -->
 <!-- Par cette ligne pour Bootstrap 5 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-
-
-
-
-
 
 
 
@@ -1263,12 +1232,14 @@ nextButton4.addEventListener('click', function() {
     startAnimation();
     </script>
     
- 
-
-<!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLHL63T8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+
+
+
 
 </body>
 </html>
