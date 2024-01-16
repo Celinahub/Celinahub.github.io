@@ -13,18 +13,26 @@ body {
    background-color: #444243;
 }
 
+.navbar-brand {
+   font-size: 18px; /* Ajustez la taille de la police selon vos préférences */
+}
 
- .nav-link-text {
-   color: #F9F4F0;
- }
 
- .nav-link-icon {
+ /* Ajuster la taille du texte pour les rubriques du menu */
+.nav-link-text {
    color: #F9F4F0;
- }
-   
+   font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
+}
+
+/* Ajuster la taille des icônes du menu */
+.nav-link-icon {
+   color: #F9F4F0;
+   font-size: 14px; /* Ajustez la taille de la police selon vos préférences */
+}
+
 
  .navbar-logo {
-   width: 50px; /* Ajustez la largeur de votre logo selon vos besoins */
+   width: 40px; /* Ajustez la largeur de votre logo selon vos besoins */
    height: auto;
    margin-right: 10px; /* Ajoutez un espacement entre le logo et le texte */
 }
