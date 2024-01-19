@@ -450,7 +450,7 @@ body.dark-mode .diplome-header {
 /* Styles pour le mode sombre */
 body.dark-mode .diplome-description {
    background-color: #444243; /* Remplacez ceci par la couleur souhaitée pour le mode sombre */
-   color: #121212;
+   color: #cdcbcc;
 }
 
 
@@ -824,7 +824,7 @@ body.dark-mode .custom-text {
  }
  body.dark-mode .experience-description {
    background-color: #444243; /* Mode sombre fond caché de la description d'expérience */
-   color: #121212; /* Mode sombre texte de la description d'expérience */
+   color: #cdcbcc; /* Mode sombre texte de la description d'expérience */
    }
  
   
@@ -1054,8 +1054,8 @@ body.dark-mode .follow-text {
 }
 
 body.dark-mode .email-icon {
-   background-color: #121212; /* Couleur du fond icône en mode sombre */
-   color: #cdcbcc; /* Couleur enveloppe icône en mode sombre */
+   background-color: #cdcbcc; /* Couleur du fond icône en mode sombre */
+   color: #25221f; /* Couleur enveloppe icône en mode sombre */
 }
 .email-icon i {
    font-size: 2vw; /* Ajuster la taille de l'icône en fonction de la largeur de la vue */
@@ -1074,8 +1074,8 @@ body.dark-mode .email-icon {
 
 body.dark-mode .linkedin-icon,
 body.dark-mode .github-icon {
-   background-color: #121212; /* Couleur du fond icône en mode sombre */
-   color: #cdcbcc; /* Couleur enveloppe icône en mode sombre */
+   background-color: #cdcbcc; /* Couleur du fond icône en mode sombre */
+   color: #25221f; /* Couleur enveloppe icône en mode sombre */
 }
 
 .linkedin-icon:hover,
