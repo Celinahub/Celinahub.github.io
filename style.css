@@ -9,14 +9,26 @@ body {
    box-sizing: border-box;
  }
 
+ /* Styles pour le menu déroulant */
+
  .custom-navbar {
    background-color: #444243;
 }
 
-.navbar-brand {
-   font-size: 18px; /* Ajustez la taille de la police selon vos préférences */
+body.dark-mode .custom-navbar {
+   background-color: #444243; /* Fond sombre en mode sombre */
 }
 
+
+.navbar-brand {
+   font-size: 18px; /* Ajustez la taille de la police selon vos préférences */
+   color: #FFF;
+   
+}
+/* Style pour le texte "CELINE HUBERT" en mode sombre */
+body.dark-mode .navbar-brand {
+   color: #FFF; /* Remplacez "your-dark-color" par la couleur souhaitée en mode sombre */
+ }
 
  /* Ajuster la taille du texte pour les rubriques du menu */
 .nav-link-text {
@@ -24,21 +36,31 @@ body {
    font-size: 12px; /* Ajustez la taille de la police selon vos préférences */
 }
 
+body.dark-mode .nav-link-text {
+   color: #cdcbcc; /* Fond sombre en mode sombre */
+}
+
+
 /* Ajuster la taille des icônes du menu */
 .nav-link-icon {
    color: #F9F4F0;
    font-size: 14px; /* Ajustez la taille de la police selon vos préférences */
 }
 
+body.dark-mode .nav-link-icon {
+   color: #cdcbcc; /* Fond sombre en mode sombre */
+}
 
  .navbar-logo {
    width: 40px; /* Ajustez la largeur de votre logo selon vos besoins */
    height: auto;
    margin-right: 10px; /* Ajoutez un espacement entre le logo et le texte */
 }
- /* ... autres styles de boutons ... */
  
+ 
+
  /* Style de l'icône de flèche vers le haut */
+
  .scroll-to-top {
     position: fixed;
     bottom: 20px; /* Ajustez la position verticale selon vos besoins */
@@ -61,6 +83,18 @@ body {
     color: #fff; /* Couleur de la flèche (blanche) au survol */
  }
  
+/* Styles pour le mode sombre */
+body.dark-mode .scroll-to-top {
+   background-color: #444243; /* Couleur de fond mode sombre*/
+   color: #cdcbcc; /* Couleur de l'icône (blanc) mode sombre */
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode .scroll-to-top:hover {
+   background-color: #C26C6B; /* Couleur de fond au survol mode sombre */
+   color: #cdcbcc; /* Couleur de la flèche (blanche) au survol mode sombre*/
+}
+
  /* Style responsive */
  @media (max-width: 480px) {
     .scroll-to-top {
@@ -71,19 +105,53 @@ body {
     }
  }
  
+/* Styles pour la rubrique présentation */
+
+
+
  /* Pour un meilleur espacement entre l'image et le texte */
  .profile-image {
     margin-bottom: 20px;
  }
+
+
+/* Styles par défaut (mode clair) */
+.profile-text {
+   color: #444243;
+   margin-bottom: 20px;
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode .profile-text {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+/* Styles spécifiques pour h1 en mode sombre */
+body.dark-mode .profile-text h1 {
+   color: #cdcbcc; /* Couleur du texte en mode sombre pour h1 */
+}
+
+ @media (max-width: 480px) {
+   .profile-text {
+       margin-top: 20px; /* Espace au-dessus du texte */
+   }
+}
+
+ #presentation {
+   background-color: #FFF;
+}
+
+body.dark-mode #presentation {
+background-color: #121212; /* Fond sombre en mode sombre */
+}
+
  
- /* Pour un meilleur espacement entre le texte et le bouton */
- .profile-text {
-    margin-bottom: 20px;
- }
- 
+
+ /* Styles pour le bouton télécharger mon cv */
+
  :root {
-  --bs-primary: #C26C6B;
- }
+   --bs-primary: #C26C6B; /* Supprime le couleur bleue du lien du texte et contour */
+  }
  
  .btn-outline-primary {
   color: var(--bs-primary); /* Couleur du texte */
@@ -96,8 +164,13 @@ body {
   outline: none; /* Supprime le contour par défaut */
   border: 1px solid var(--bs-primary); /* Ajoute un contour personnalisé */
  }
+/* Styles pour le mode sombre */
+body.dark-mode .btn-outline-primary:hover {
+  color: #121212; /* Couleur du texte au survol mode sombre */
+}
+
  
- a.btn.btn-outline-primary:active,
+a.btn.btn-outline-primary:active,
 a.btn.btn-outline-primary:focus,
 a.btn.btn-outline-primary:focus:active {
     background-color: transparent; /* Fond transparent au clic et au focus */
@@ -105,6 +178,8 @@ a.btn.btn-outline-primary:focus:active {
     color: #685153; /* Couleur du texte en #685153 au clic et au focus */
     outline: none; /* Supprimez uniquement l'outline au clic et au focus */
 }
+
+
 
  /* Réduisez la taille de la photo de profil */
  .profile-image img {
@@ -131,11 +206,6 @@ a.btn.btn-outline-primary:focus:active {
     transform: translate(-50%, -50%);
  }
  
- @media (max-width: 480px) {
-    .profile-text {
-        margin-top: 20px; /* Espace au-dessus du texte */
-    }
- }
  
  /* Styles pour positionner l'icône de bulle sur la photo de profil */
  .profile-image {
@@ -168,6 +238,24 @@ a.btn.btn-outline-primary:focus:active {
     }
  }
  
+
+/* Styles pour la rubrique compétences */
+
+ #competences {
+   background-color: #F9F4F0;
+}
+
+body.dark-mode #competences {
+background-color: #25221f; /* Fond sombre en mode sombre */
+}
+
+.competences-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
+
  /* Styles pour les barres de compétences animées */
     .progress-bar {
         transition: width 2s ease-in-out; /* Durée de l'animation et type de transition */
@@ -182,15 +270,36 @@ a.btn.btn-outline-primary:focus:active {
  }
  
  
-    /* Pour remplacer la partie non remplie des barres de compétences par du blanc */
-    .progress-bar {
-        background-color: #C26C6B; /* Couleur de la partie remplie */
-    }
+    /* Pour remplacer la partie non remplie des barres de compétences par du blanc mode clair */
+    /* Styles par défaut (mode clair) */
+.progress-bar {
+   background-color: #C26C6B; /* Couleur de la partie remplie */
+}
+
+/* Styles pour le mode sombre avec des bandes rayées */
+body.dark-mode .progress-bar {
+   background: repeating-linear-gradient(
+       45deg,
+       #C26C6B,
+       #C26C6B 5px, /* Largeur de la première bande */
+       #A85F5E 5px, /* Couleur de la bande suivante */
+       #A85F5E 10px /* Largeur de la deuxième bande */
+   );
+}
+
+     
+     
  
-    /* Spécifiez la couleur de la partie non remplie */
-    .progress {
-        background-color: #fff; /* Couleur de la partie non remplie en blanc */
-    }
+    /* Styles par défaut (mode clair) */
+.progress {
+   background-color: #fff; /* Couleur de la partie non remplie en blanc */
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode .progress {
+   background-color: #121212; /* Couleur de la partie non remplie en mode sombre */
+}
+
  
  
  /* Styles pour les titres "Humaines" */
@@ -199,57 +308,54 @@ a.btn.btn-outline-primary:focus:active {
     font-weight: bold; /* Texte en gras */
     color: #444243;
  }
+
+/* Styles pour le mode sombre */
+body.dark-mode h2 {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+
+
  
  .competence-name {
     font-size: 16px; /* Taille de police de 18 pixels */
     font-weight: normal; /* Texte en gras */
     color: #444243;
  }
+
+
+/* Styles pour le mode sombre */
+body.dark-mode .competence-name {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+
  
  /* Utilisez la police Helvetica pour les titres */
  h1, h2, h3 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
  }
  
-    
-    .competences-section h1 {
-    color: #444243; /* Couleur noire pour le titre */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 50px; /* Marge en bas du titre */
-    font-size: 30px; /* Taille de police de 24 pixels */
- }
- 
-    
-    .diplomes-section h1 {
-    color: #444243; /* Couleur noire pour le titre */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 50px; /* Marge en bas du titre */
-    font-size: 30px; /* Taille de police de 24 pixels */
- }
-    
-    
-    .portfolio-section h1 {
-    color: #444243; /* Couleur noire pour le titre */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 50px; /* Marge en bas du titre */
-    font-size: 30px; /* Taille de police de 24 pixels */
- }
-    
-    .experiences-section h1 {
-    color: #444243; /* Couleur noire pour le titre */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 50px; /* Marge en bas du titre */
-    font-size: 30px; /* Taille de police de 24 pixels */
- }
-    
-    
- .loisirs-section h1 {
-    color: #444243; /* Couleur noire pour le titre */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 50px; /* Marge en bas du titre */
-    font-size: 30px; /* Taille de police de 24 pixels */
- }
-    
+
+/* Styles pour la rubrique diplômes */
+
+
+#diplomes {
+   background-color: #FFF;
+}
+
+body.dark-mode #diplomes {
+background-color: #121212; /* Fond sombre en mode sombre */
+}
+
+
+.diplomes-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
+
  /* Style spécifique pour les titres "CAP AEPE", "BAC+3 Stylisme / modélisme option textile", et "BAC PRO Artisanat et métiers d'Art" */
  h3.diplome-title .diplome-title-specific {
     font-size: 18px; /* Taille de police de 18 pixels */
@@ -263,25 +369,36 @@ a.btn.btn-outline-primary:focus:active {
     font-weight: normal;
  }
  
- /* Styles pour les boutons + et - */
+/* Styles pour le mode sombre */
+body.dark-mode .diplome-year {
+   color: #cdcbcc; /* Couleur de texte en mode sombre */
+}
+
+ /* Styles pour les boutons découvrir rubrique expériences et rubrique diplômes + et - */
  .btn-toggle {
-    background-color: #ffffff;
-    color: #CCBCB4;
-    border: none;
-    cursor: pointer;
- }
+   background-color: #ffffff;
+   color: #CCBCB4;
+   border: none;
+   cursor: pointer;
+}
+
+.btn-toggle:hover {
+   background-color: #ffffff;
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode .btn-toggle {
+  background-color: #121212; /* Remplacez ceci par la couleur souhaitée pour le mode sombre */
+  color: #cdcbcc;
+}
+
+
+/* Styles pour le mode sombre */
+body.dark-mode .diplome-header {
+   background-color: #121212; /* Remplacez ceci par la couleur souhaitée pour le mode sombre */
+}
+
  
- .btn-toggle:hover {
-    background-color: #ffffff;
- }
- 
- /* Styles pour les icônes des boutons + et - */
- .btn-toggle i {
-    font-size: 18px;
-    vertical-align: middle;
-    margin-left: 5px;
-    margin-right: 5px;
- }
  
  /* Styles pour les titres "Découvrir" avec la flèche */
  .diplome-title-specific,
@@ -325,48 +442,34 @@ a.btn.btn-outline-primary:focus:active {
  .diplome-description {
     display: none;
     background-color: #CCBCB4;
+    color: #444243;
     padding: 10px;
     border-radius: 5px;
  }
  
- /* Styles pour les boutons + et - */
- .btn-toggle {
-    background-color: #ffffff; /* Couleur de fond */
-    color: #CCBCB4; /* Couleur du texte */
-    border: none;
-    cursor: pointer;
- }
- 
- .btn-toggle:hover {
-    background-color: #ffffff; /* Couleur de fond au survol */
- }
- 
- /* Styles pour les icônes des boutons + et - */
- .btn-toggle i {
-    font-size: 18px; /* Taille de l'icône */
-    vertical-align: middle; /* Alignement vertical de l'icône */
-    margin-left: 5px; /* Marge à gauche de l'icône */
-    margin-right: 5px; /* Marge à droite de l'icône */
- }
-    
- .sr-only {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   padding: 0;
-   overflow: hidden;
-   clip: rect(0, 0, 0, 0);
-   border: 0;
-   opacity: 0;
-   transition: opacity 0.3s ease; /* Ajout d'une transition pour lisser le changement d'opacité */
+/* Styles pour le mode sombre */
+body.dark-mode .diplome-description {
+   background-color: #444243; /* Remplacez ceci par la couleur souhaitée pour le mode sombre */
+   color: #121212;
 }
 
-.button-text-visible .sr-only {
-   opacity: 1;
-   clip: auto;
+
+/* Styles pour la rubrique portfolio */
+
+#portfolio {
+   background-color: #F9F4F0;
 }
 
+body.dark-mode #portfolio {
+background-color: #25221f; /* Fond sombre en mode sombre */
+}
+
+.portfolio-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
 
 
  /* Ajoutez ce CSS pour maintenir les images carrées */
@@ -389,6 +492,7 @@ a.btn.btn-outline-primary:focus:active {
 }
 
 
+
 .uni-frame {
    background-color: #444243;
    width: 100%;
@@ -405,6 +509,11 @@ a.btn.btn-outline-primary:focus:active {
    overflow: hidden;
 }
 
+body.dark-mode .uni-frame {
+   background-color: #121212; /* Fond sombre en mode sombre */
+}
+
+
  
 .uni-text {
    margin-top: 10px;
@@ -413,6 +522,7 @@ a.btn.btn-outline-primary:focus:active {
    white-space: normal;
    font-size: 1vw; /* Utilisation de vw pour la taille de la police relative à la largeur de la vue */
    min-width: 140px; /* Taille minimale pour le texte en pixels */
+   color: #F9F4F0;
 }
  
 .texte-proportionnel {
@@ -423,7 +533,23 @@ a.btn.btn-outline-primary:focus:active {
    font-size: 1.2vw;
    min-width: 160px;
    letter-spacing: 8px; /* Ajustez cette valeur selon vos préférences */
+   color: #F9F4F0;
 }
+
+body.dark-mode .uni-text,
+body.dark-mode .texte-proportionnel {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+.horizontal-line {
+   color: #F9F4F0;
+}
+
+
+body.dark-mode .horizontal-line {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
 
 @media screen and (max-width: 768px) {
    .uni-text {
@@ -435,34 +561,6 @@ a.btn.btn-outline-primary:focus:active {
       letter-spacing: 4px; /* Ajustez cette valeur selon vos préférences */
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
 
 
  
@@ -563,6 +661,24 @@ a.btn.btn-outline-primary:focus:active {
     margin-top: -5px; /* Ajustez cette valeur pour déplacer le texte vers le haut */
  }
  
+
+/* Styles pour la rubrique expériences */
+ 
+#experiences {
+   background-color: #ffffff;
+}
+
+body.dark-mode #experiences {
+background-color: #121212; /* Fond sombre en mode sombre */
+}
+
+.experiences-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
+
  
  /* CSS */
  .timeline {
@@ -571,6 +687,7 @@ a.btn.btn-outline-primary:focus:active {
     margin: 0;
  }
  
+
  .experience {
     display: flex;
     margin-bottom: 0px;
@@ -583,45 +700,100 @@ a.btn.btn-outline-primary:focus:active {
     border-left: 2px solid #444243; /* Ligne verticale de la frise */
  }
  
+ body.dark-mode .experience-info {
+   background-color: #121212; /* Fond sombre pour chaque élément de la frise en mode sombre */
+   border-left: 2px solid #ccbcb4; /* Mode sombre ligne verticale de la frise */
+   }
+
  .experience-title {
     font-size: 18px;
-    color: #444243;
+    color: #444243;/* Mode clair icône double rond frise chronologique */
     margin-top: 0;
  }
  
+ body.dark-mode .experience-title {
+   color: #ccbcb4; /* Mode sombre icône double rond frise chronologique */
+   }
+
+
+   .experience-title-specific {
+      font-size: 18px;
+      color: #C26C6B;/* Mode clair titre métier */
+      
+   }
+   body.dark-mode .experience-title-specific {
+      color: #C26C6B; /* Mode sombre titre métier */
+      }
+
+    
+/* Styles spécifiques pour "Découvrir" */
+.custom-text {
+   font-size: 14px; /* Taille de police différente pour "Découvrir" */
+   color: #CCBCB4; /* Mode clair texte découvrir */
+}
+body.dark-mode .custom-text {
+   color: #cdcbcc; /* Mode sombre texte découvrir */
+   }
+
+   .custom-link {
+      color: #444243;
+      /* Ajoutez d'autres styles au besoin, par exemple : */
+      text-decoration: none; /* Supprime le soulignement du lien si nécessaire */
+      font-weight: bold; /* Ajoute de la graisse au texte si nécessaire */
+      /* Ajoutez d'autres styles personnalisés au besoin */
+  }
+  
+  body.dark-mode .custom-link {
+   color: #cdcbcc; /* Mode sombre texte découvrir */
+   }
+
+
  .experience-subtitle {
     font-size: 14px;
-    color: #444243;
+    color: #444243; /* Mode clair informations métier */
     margin: 0;
  }
+ body.dark-mode .experience-subtitle {
+   color: #ccbcb4; /* Mode sombre informations métier */
+   }
  
  .experience-date {
     font-size: 14px;
-    color: #444243;
+    color: #444243; /* Mode clair texte dates */
     margin: 0;
     margin-bottom: 10px; /* Ajoutez cette ligne pour gérer l'espace sous la date */
  }
- 
+ body.dark-mode .experience-date {
+   color: #444243; /* Mode sombre texte dates */
+   }
+
+
  .keywords {
     padding: 5px;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     margin: 0; /* Supprimer l'espace entre les mots-clés et le titre */
+    margin-left: -10px;
+    margin-top: 5px;
  }
  
  .keyword {
     
     margin-right: 5px; /* Marge à droite pour séparer les mots-clés */
     background-color: transparent;
-    color: #444243;
+    color: #444243; /* Mode clair texte keyword */
     padding: 5px;
-    border: 1px solid #444243;
+    border: 1px solid #444243; /* Mode clair contour keyword */
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
  }
- 
+ body.dark-mode .keyword {
+   color: #ccbcb4; /* Mode sombre texte keyword */
+   border: 1px solid #ccbcb4; /* Mode sombre contour keyword */
+   }
+
  /* Ajoutez des styles spécifiques pour les écrans plus petits (par exemple, largeur inférieure à 768px) */
  @media (max-width: 768px) {
     .keyword {
@@ -644,27 +816,48 @@ a.btn.btn-outline-primary:focus:active {
  
  
  .experience-description {
-    background-color: #CCBCB4; /* Fond coloré de la description d'expérience */
+    background-color: #CCBCB4; /* Mode clair fond caché de la description d'expérience */
+    color: #444243; /* Mode clair texte de la description d'expérience */
     padding: 10px;
     border-radius: 5px;
     display: none; /* Gardez la description cachée au chargement de la page */
  }
+ body.dark-mode .experience-description {
+   background-color: #444243; /* Mode sombre fond caché de la description d'expérience */
+   color: #121212; /* Mode sombre texte de la description d'expérience */
+   }
  
+  
+
  /* Styles pour les loisirs */
+
+ #loisirs {
+   background-color: #F9F4F0;
+}
+
+body.dark-mode #loisirs {
+background-color: #25221f; /* Fond sombre en mode sombre */
+}
  
- .loisirs-section h1 {
-    color: #444243;
-    margin-bottom: 20px;
- }
+
+.loisirs-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
+
  
  /* Ajoutez une marge intérieure à la section des loisirs */
  .loisirs-section {
     padding-left: 20px; /* Ajoutez une marge de 20px à gauche */
     padding-right: 20px; /* Ajoutez une marge de 20px à droite */
-    background: linear-gradient(to right, #F9F4F0, #F9F4F0);
+    
  }
  
- 
+
+
+
  .loisir-item {
     margin-bottom: 20px;
     display: flex;
@@ -700,11 +893,18 @@ a.btn.btn-outline-primary:focus:active {
  }
  
  .loisir-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: filter 0.3s; /* Ajout de la transition pour le filtre */
  }
  
+ /* Appliquer le filtre de grisaille en mode sombre */
+ body.dark-mode .loisir-image img {
+   filter: grayscale(20%) opacity(0.6); /* Adjustez le pourcentage de grisaille et l'opacité selon vos besoins */
+ }
+
+
  .loisir-overlay {
     position: absolute;
     top: 0;
@@ -744,17 +944,34 @@ a.btn.btn-outline-primary:focus:active {
     }
  }
 
-   
+/* Styles pour contact */
 
-   #contact {
-      background-color: #F9F4F0;
-      overflow: hidden;
-      padding: 20px;
-  }
-  
-  .contact-content {
-   margin: 0 20px; /* Ajoutez une marge horizontale de 20px à gauche et à droite */
+#contact {
+   background-color: #F9F4F0;
 }
+
+body.dark-mode #contact {
+background-color: #121212; /* Fond sombre en mode sombre */
+}
+
+
+.contact-section h1 {
+   color: #444243; /* Couleur noire pour le titre */
+   font-weight: bold; /* Texte en gras */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 30px; /* Taille de police de 24 pixels */
+}
+
+
+  
+/* Ajoutez une marge intérieure à la section de contact */
+.contact-section {
+   padding-left: 20px; /* Ajoutez une marge de 20px à gauche */
+   padding-right: 20px; /* Ajoutez une marge de 20px à droite */
+   
+}
+
+
 
   #contact-info,
   #liens-sociaux {
@@ -769,7 +986,63 @@ a.btn.btn-outline-primary:focus:active {
       padding: 20px;
       min-height: 150px; /* Ajustez cette valeur selon vos besoins */
   }
-  
+
+body.dark-mode  #contact-info,
+body.dark-mode #liens-sociaux {
+   background-color: #25221f;
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+a.email-link {
+   color: #444243;
+   text-decoration: none;
+   margin-left: 10px;
+}
+
+
+body.dark-mode a.email-link {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+
+
+
+/* Styles par défaut pour les écrans de toutes tailles */
+.email-text {
+   font-size: 1.2vw;
+   font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+   .email-text {
+       font-size: 2.05vw; /* Ajustez la taille de la police uniquement pour l'adresse e-mail sur les écrans plus petits */
+   }
+}
+
+
+
+/* Styles par défaut pour les écrans de toutes tailles */
+.follow-text {
+   font-size: 2.5vw;
+   color: #444243;
+}
+body.dark-mode .follow-text {
+   color: #cdcbcc; /* Couleur du texte en mode sombre */
+}
+
+/* Media query pour les écrans dont la largeur est supérieure à 768 pixels (par exemple, les écrans PC) */
+@media (min-width: 769px) {
+   .follow-text {
+       font-size: 1.4vw; /* Ajustez la taille de la police uniquement pour les écrans PC */
+   }
+}
+
+
+
+
+
+
   .email-icon {
    background-color: #444243;
    border-radius: 50%;
@@ -780,6 +1053,10 @@ a.btn.btn-outline-primary:focus:active {
    color: #fff;
 }
 
+body.dark-mode .email-icon {
+   background-color: #121212; /* Couleur du fond icône en mode sombre */
+   color: #cdcbcc; /* Couleur enveloppe icône en mode sombre */
+}
 .email-icon i {
    font-size: 2vw; /* Ajuster la taille de l'icône en fonction de la largeur de la vue */
 }
@@ -793,6 +1070,12 @@ a.btn.btn-outline-primary:focus:active {
    text-align: center;
    text-decoration: none;
 
+}
+
+body.dark-mode .linkedin-icon,
+body.dark-mode .github-icon {
+   background-color: #121212; /* Couleur du fond icône en mode sombre */
+   color: #cdcbcc; /* Couleur enveloppe icône en mode sombre */
 }
 
 .linkedin-icon:hover,
@@ -844,56 +1127,17 @@ a.btn.btn-outline-primary:focus:active {
     }
 }
 
-
-
-
-
-
-
-
-/* Styles par défaut pour les écrans de toutes tailles */
-.email-text {
-   font-size: 1.2vw;
-}
-
-
-@media (max-width: 768px) {
-   .email-text {
-       font-size: 2.05vw; /* Ajustez la taille de la police uniquement pour l'adresse e-mail sur les écrans plus petits */
-   }
-}
-
-
-
-/* Styles par défaut pour les écrans de toutes tailles */
-.follow-text {
-   font-size: 2.5vw;
-}
-
-/* Media query pour les écrans dont la largeur est supérieure à 768 pixels (par exemple, les écrans PC) */
-@media (min-width: 769px) {
-   .follow-text {
-       font-size: 1.4vw; /* Ajustez la taille de la police uniquement pour les écrans PC */
-   }
-}
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-
-
   
   #map {
       filter: grayscale(100%);
+      height: 500px;
+      border: 5px solid #fff;
+      border-radius: 5px;
   }
+  body.dark-mode #map {
+   border: 5px solid #25221f;
+}
+
   
   #contact-map {
       flex: 1;
@@ -911,32 +1155,25 @@ a.btn.btn-outline-primary:focus:active {
   }
   
  
-  .custom-footer-section {
-   background-color: #F9F4F0;
-   padding: 20px; /* Ajoutez du rembourrage si nécessaire */
-}
+  
 
 .btn-custom {
    background-color: #444243;
    border-color: #444243;
-   color: white; /* Couleur du texte en état normal */
+   color: white; /* Couleur du texte envoyer pour formulaire en état normal */
 }
 
 .btn-custom:hover {
    background-color: #C26C6B;
    border-color: #C26C6B;
-   color: white; /* Couleur du texte au survol */
+   color: white; /* Couleur du texte envoyer pour formulaire au survol */
 }
 
 .btn-custom:focus {
    outline: none; /* Supprime la bordure par défaut au focus */
 }
-/* ... autres styles de boutons ... */
-   
- /* Icônes de marqueurs */
-        
-        /* Icônes de marqueurs en noir et blanc */
- 
+
+
  /* Désaturation de la carte en noir et blanc */
  #map {
    filter: grayscale(100%);
@@ -968,6 +1205,73 @@ a.btn.btn-outline-primary:focus:active {
    }
 }
 
-     
+
+
+/* Styles pour choix mode clair ou sombre */
+
+/* Style du texte mode clair pour activer le mode sombre */
+.dark-mode-section p {
+   margin-right: 10px;
+   margin-left: 40px;
+   color: #444243; /* Couleur du texte */
+   font-size: 12px; /* Taille de la police */
+   font-weight: bold; /* Texte en gras */
+}
+
+body.dark-mode .dark-mode-section p {
+   color: #cdcbcc;
+}
+
+
+/* Bouton mode clair pour le mode sombre */
+.dark-mode-section .form-check-input:checked {
+   background-color: #C26C6B; /* Fond en mode sombre */
+   border-color: #C26C6B; /* Couleur des contours en mode sombre */
+   box-shadow: 0 0 0 2px #C26C6B; /* Ombre avec la couleur en mode sombre */
+}
+
+/* Mode clair background section avec choix clair ou mode sombre */
+.dark-mode-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #F9F4F0;
+   padding: 10px 0;
+}
+
+body.dark-mode .dark-mode-section {
+   background-color: #121212;
+}
+
+
+/* Styles pour texte pied de page */
+
+.custom-footer-section {
+   background-color: #F9F4F0;
+   padding: 20px; /* Ajoutez du rembourrage si nécessaire */
+}
+
+
+body.dark-mode .custom-footer-section {
+background-color: #121212; /* Fond sombre en mode sombre */
+}
+
+
+.text-center {
+   color: #444243;
+   font-size: 12px;
+   font-weight: normal;
+}
+
+body.dark-mode .text-center {
+color: #cdcbcc; /* Fond sombre en mode sombre */
+}
+
+
+/* Styles pour mes images en mode sombre */
+
+body.dark-mode img {
+   filter: grayscale(20%);
+ }
  
-      
+
