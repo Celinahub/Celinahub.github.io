@@ -9,6 +9,9 @@ body {
    box-sizing: border-box;
  }
 
+ 
+
+
  /* Styles pour le menu déroulant */
 
  .custom-navbar {
@@ -1136,6 +1139,7 @@ body.dark-mode .github-icon {
   }
   body.dark-mode #map {
    border: 5px solid #25221f;
+   filter: invert(100%);
 }
 
   
@@ -1207,12 +1211,23 @@ body.dark-mode .github-icon {
 
 
 
-/* Styles pour choix mode clair ou sombre */
+/* Styles pour la section mode sombre ligne horizontale et menu langues */
+.custom-section {
+   background-color: #F9F4F0; /* Couleur de fond de la section */
+   padding: 20px; /* Ajoutez un espacement intérieur si nécessaire */
+   margin-left: 0px;
+}
+body.dark-mode .custom-section {
+   background-color: #121212;
+}
+
+
+
+
+
 
 /* Style du texte mode clair pour activer le mode sombre */
 .dark-mode-section p {
-   margin-right: 10px;
-   margin-left: 40px;
    color: #444243; /* Couleur du texte */
    font-size: 12px; /* Taille de la police */
    font-weight: bold; /* Texte en gras */
@@ -1224,11 +1239,35 @@ body.dark-mode .dark-mode-section p {
 
 
 /* Bouton mode clair pour le mode sombre */
+.dark-mode-section .form-check-input:not(:checked) {
+   background-color: #F9F4F0; /* Fond en mode clair */
+   border-color: #444243; /* Couleur des contours en mode clair */
+   box-shadow: 0 0 0 2px #F9F4F0; /* Ombre avec la couleur en mode sombre */
+}
+
+/* Styles pour le point curseur en mode clair */
+.dark-mode-section .form-check-input:not(:checked) + .form-check-label::before {
+   background-color: #444243; /* Couleur du point curseur en mode clair */
+   
+}
+
+
+
+/* Bouton mode clair pour le mode sombre */
 .dark-mode-section .form-check-input:checked {
    background-color: #C26C6B; /* Fond en mode sombre */
    border-color: #C26C6B; /* Couleur des contours en mode sombre */
    box-shadow: 0 0 0 2px #C26C6B; /* Ombre avec la couleur en mode sombre */
 }
+
+
+/* Styles pour le point (toggle) quand le bouton n'est pas activé */
+#darkModeSwitch:not(:checked) + .form-check-label::before {
+   background-color: #444243; /* Couleur du point à gauche/droite lorsqu'il n'est pas activé */
+}
+
+
+
 
 /* Mode clair background section avec choix clair ou mode sombre */
 .dark-mode-section {
@@ -1242,6 +1281,114 @@ body.dark-mode .dark-mode-section p {
 body.dark-mode .dark-mode-section {
    background-color: #121212;
 }
+
+
+
+
+/* Styles pour ligne horizontale */
+.custom-hr {
+   border-top: 2px solid #444243;
+}
+body.dark-mode .custom-hr {
+   border-top: 2px solid #cdcbcc;
+}
+
+
+
+
+/* Styles pour les éléments du menu LANGUE */
+.langue-menu .dropdown-toggle {
+   font-size: 14px;
+   color: #444243;
+   font-weight: bold;
+
+}
+
+body.dark-mode .dropdown-toggle {
+   color: #cdcbcc;
+}
+
+/* Styles pour les éléments du menu LANGUE lorsqu'ils sont en focus (déroulé) */
+.langue-menu .dropdown-toggle:focus {
+   color: #444243; /* Remplacez par la couleur souhaitée mot langue mode clair*/
+}
+
+body.dark-mode .langue-menu .dropdown-toggle:focus {
+   color: #cdcbcc; /* Remplacez par la couleur souhaitée mot langue mode sombre */
+}
+
+.nav-link.dropdown-toggle {
+   text-align: left; /* Forcer l'alignement du mot langue à gauche sur écran réduit lorsque le menu déroulant est activé */
+}
+
+
+
+
+/* Styles pour les éléments du menu déroulant */
+.dropdown-item {
+   font-size: 14px; /* Taille de la police */
+   color: #444243; /* Couleur du texte */
+   font-weight: bold; /* Épaisseur de la police, par exemple: normal, bold, etc. */
+   background-color: #F9F4F0; /* Couleur de fond intérieur bordure rubriques langues remplissage rubriques uniquement */
+}
+
+body.dark-mode .dropdown-item {
+   color: #cdcbcc; /* Couleur du texte */
+   background-color: #121212; /* Couleur de fond intérieur bordure rubriques langues remplissage rubriques uniquement */
+   
+}
+
+/* Au survol, la couleur de fond devient blanc */
+.dropdown-item:hover {
+   background-color: #FFF;
+}
+
+body.dark-mode .dropdown-item:hover {
+   background-color: #25221f;
+   
+}
+
+/* Styles pour les éléments du menu déroulant */
+.dropdown-menu {
+   
+   border: 1px solid #444243; /* Bordure contour de l'ensemble des rubriques langues de 1 pixel */
+   background-color: #F9F4F0; /* Couleur de fond intérieur bordure rubriques langues extrême haut et bas */
+}
+
+body.dark-mode .dropdown-menu {
+   border: 1px solid #cdcbcc; /* Bordure contour de l'ensemble des rubriques langues de 1 pixel */
+   background-color: #121212; /* Couleur de fond intérieur bordure rubriques langues extrême haut et bas */
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajoutez une marge basse à la section du menu LANGUE */
+.langues-menu {
+   margin-bottom: 150px; /* Ajustez la valeur selon vos besoins */
+}
+
+
+
+
+
+
+
 
 
 /* Styles pour texte pied de page */
@@ -1266,6 +1413,29 @@ background-color: #121212; /* Fond sombre en mode sombre */
 body.dark-mode .text-center {
 color: #cdcbcc; /* Fond sombre en mode sombre */
 }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Styles pour mes images en mode sombre */
